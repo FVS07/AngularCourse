@@ -1,1 +1,1 @@
-(funtion()
+var app = angular.module('gemStore', []);
