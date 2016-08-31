@@ -1,14 +1,17 @@
 (function  () {
 
 	var gem = {
-		name: 'Azurite',
-		price: '2.95',
-		description: 'lorem ipsum dolor sit amet,'
+		name: 'Azurita',
+		price: 2.95,
+		description: 'lorem ipsum dolor sit amet',
+		canPurchase: false,
+		soldOut: true,
 
 	};
 var app = angular.module('gemStore', []);
-	// body...
-	app.controller('StoreController', function  () {
-		// body...
-	})
+	
+	app.controller('StoreController',function() {
+		this.product = gem;
+	
+	})price
 })();
