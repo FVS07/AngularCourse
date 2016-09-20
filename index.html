@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" ng-app="gemStore">
 <head>
@@ -8,31 +9,41 @@
 </head>
 <body>
 	<!--<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ab numquam placeat tempora maxime perspiciatis alias, incidunt quisquam repellat beatae quibusdam veniam nam deleniti amet recusandae earum dolore, voluptate possimus.</h1>
+
 	<p> I am {{15 + 10}}</p>
 	<p>{{"Hello" + " World"}} </p>-->
+
 	<div class="container" ng-controller="StoreController as store">
 		<div class="list-group">
 			<div class="list-group-item"  ng-repeat="product in store.products | orderBy: 'price'">
 				<h3 product-title></h3>
-				<!-- <img class ="center-block" ng-src="{{product.image[0].url}}"> -->
-				<!--<product-title></product-title>
-				<div class="row">
-					<div class="col-sm-4" ng-repeat="image in product.images">
-						<a href="" class="thumnail" ng-class="{active: product.isSelectedImage(image)}" ng-model="image" ng-click="product.selectImage(image)">
-							<img ng-src="{{image.url}}"  class="image-responsive" >
+				<!--<img ng-src="{{product.images[0].url}}"  class="center-block"alt="">
+				<!--<product-title></product-title>-->
+				<!--<div class="row">
+					<div class="col-sm-6 col-md-3">
+						<a href="" class="thumnail">
+							<img ng-repeat="image in product.images"
+							ng-src="{{image.url}}" class="image-responsive">
 						</a>
 					</div>
 				</div>-->
-				<div ng-controller="GalleryController as galery" ng-show="product.images.length">
+
+				<div class="" ng-controller="GalleryController as gallery" ng-show="product.images.length">
 					<div class="img-wrap">
-						<img class="center-block" ng-src="{{product.images[galery.current].url}}">
+						<img class="center-block" ng-src="{{product.images[gallery.current].url}}">
 					</div>
-					<ul class="img-thumbnails clearfix center-block">
-						<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
-							<img ng-src="{{image.url}}" ng-click="galery.setCurrent(image.id)">
-						</li>
-					</ul>
+					<div class=" row">
+						<div class="center-block">
+							<ul class="img-thumbnails clearfix ">
+								<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+									<img  ng-src="{{image.url}}" ng-click="gallery.setCurrent(image.id)" alt="">
+								</li>
+							</ul>
+						</div>
+					</div>
+					
 				</div>
+
 				<product-panels></product-panels>
 				<!--<button ng-show="!product.canPurchase">Add to Cart</button>-->
 				
@@ -41,6 +52,7 @@
 		</div>
 		
 	</div>
+
 	
 	<script src="js/angular.min.js"></script>
 	<script src="js/app.js"></script>

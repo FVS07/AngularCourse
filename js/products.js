@@ -1,4 +1,8 @@
-app.directive('productTitle', function(){
+
+(function(){
+	var app = angular.module('store-products', []);
+
+		app.directive('productTitle', function(){
 		return{
 			restrict: 'A',
 			templateUrl: 'product-title.html'
@@ -37,4 +41,6 @@ app.directive('productTitle', function(){
 			},
 			controllerAs: 'reviewCtrl'
 		}
-	})
+	});
+
+})();
