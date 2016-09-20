@@ -1,3 +1,4 @@
+
 (function(){
 
 	var gem = {
@@ -84,7 +85,15 @@
       	this.review = {};
       }
 
+
 	});
+
+	app.controller('GalleryController',function(){
+		this.current = 0;
+		this.setCurrent = function(id){
+			this.current = id || 0;
+		}
+	})
 
 	/*app.directive('productTitle', function(){
 		return{
