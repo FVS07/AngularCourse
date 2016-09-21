@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Abstergo</title>
+	<meta charset="UTF-8">
+	<html lang="en" ng-app="gemStore">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	<h1>Flatlanders Store</h1>
+	<p>i am {{2+2 }}</p>
+
+	<div class="container" ng-controller="StoreController as Store">
+		<div class="list-group" >
+			<div class="list-group-item"ng-hide="!store.product.soldOut">
+				<h3> {{store.product.name}}
+					<em  class="pull-right">{{store.product.price}}</em>
+
+
+				</h3>
+				<p>{{store.product.description}}</p>
+				</div>
+				<button ng-show="store.product.canPurchase"> Add to car</button>	
+				</div>
+				</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
